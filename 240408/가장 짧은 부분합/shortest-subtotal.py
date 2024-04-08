@@ -6,7 +6,7 @@ n, s = map(int, input().split())
 arr = [0] + list(map(int, input().split()))
 
 j = 0
-ans = n
+ans = n + 1
 acc = 0
 for i in range(1 + n):
     while j <= n and acc < s:
@@ -15,7 +15,5 @@ for i in range(1 + n):
     acc -= arr[i]
     if acc >= s:
         ans = min(ans, j - 1 - i)
-    if i == 0 and j == n and acc < s:
-        ans = -1
     # print(i, j, acc, ans)
-print(ans)
+print(-1 if ans == n + 1 else ans)
