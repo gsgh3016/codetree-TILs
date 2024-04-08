@@ -13,5 +13,7 @@ for i in range(1 + n):
         acc += arr[j]
         j += 1
     acc -= arr[i]
-    ans = min(ans, j - i + 1)
+    if acc >= s:
+        ans = min(ans, j - 1 - i)
+    # print(i, j, acc, ans)
 print(ans)
