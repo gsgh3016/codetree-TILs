@@ -8,6 +8,8 @@ leader, member = map(int, input().split())
 
 total = 0
 for guest in rest:
-    total += 1 + (guest - leader) // member + 1
+    total += 1
+    if guest > leader:
+        total += (guest - leader) // member + 1
 
 print(total)
