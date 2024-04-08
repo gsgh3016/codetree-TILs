@@ -9,7 +9,7 @@ j = 0
 min_len = n
 acc = 0
 for i in range(n):
-    while j <= n - 1 and acc < s:
+    while j < n - 1 and acc < s:
         acc += arr[j]
         j += 1
     acc -= arr[i]
