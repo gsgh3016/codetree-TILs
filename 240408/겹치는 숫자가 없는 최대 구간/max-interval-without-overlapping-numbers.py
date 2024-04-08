@@ -8,7 +8,7 @@ cnt = {}
 for i in arr:
     if i not in cnt:
         cnt[i] = 0
-ans = 0
+ans = 1
 j = 0
 for i in range(n):
     while j < n - 1 and cnt[arr[j]] <= 1:
