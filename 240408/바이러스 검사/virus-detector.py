@@ -10,6 +10,7 @@ total = 0
 for guest in rest:
     total += 1
     if guest > leader:
-        total += (guest - leader) // member + 1
+        num_of_member = (guest - leader) // member
+        total += num_of_member + (0 if num_of_member * member == guest - leader else 1)
 
 print(total)
