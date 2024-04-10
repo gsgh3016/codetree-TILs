@@ -7,7 +7,7 @@ work = []
 for _ in range(n):
     work.append(list(map(int, input().split())))
 idx = [i for i in range(n)]
-min_dif = 0xff
+min_dif = 0xffffff
 for comb in combinations(idx, n // 2):
     morning, evening = 0, 0
     evening_comb = [i for i in range(n) if i not in comb]
