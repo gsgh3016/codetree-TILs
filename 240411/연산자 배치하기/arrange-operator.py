@@ -23,9 +23,9 @@ dp1[0] = [nums[0], *ops]
 dp2[0] = [nums[0], *ops]
 
 for i in range(1, n):
-    cur_min = 0x4f4f4f4f
+    cur_min = dp2[i - 1][0] * nums[i] if dp2[i - 1][0] > 0 else dp2[i - 1][0] + nums[i]
     min_op_idx = -1
-    cur_max = -0x4f4f4f4f
+    cur_max = dp1[i - 1][0] * nums[i] if dp1[i - 1][0] < 0 else dp1[i - 1][0] - nums[i]
     max_op_idx = -1
 
     for j in range(1, 4):
