@@ -78,8 +78,8 @@ def go_destination(rx, ry, ex, ey):
 
 for _ in range(m):
 #    print(f"cur: {rx, ry}, battery: {c}")
-    for src in passenger:
-        print(f"{src} -> {path[src]}")
+    # for src in passenger:
+    #     print(f"{src} -> {path[src]}")
     gx, gy, c = find_new_passenger(rx, ry)
 #    print(f"move to priority: {gx, gy}, battery: {c}")
     gdx, gdy = path[(gx, gy)] if (gx, gy) in path else (-1, -1)
